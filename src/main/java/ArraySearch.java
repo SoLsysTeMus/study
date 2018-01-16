@@ -2,6 +2,7 @@ import java.util.Scanner;
 
 /**
  * Created by Aplana
+ *
  * @author Dmitriy
  * @version 1
  */
@@ -9,7 +10,7 @@ public class ArraySearch {
 
    public static void start() {
 
-      String [] words;
+      String[] words;
       int arrayLength;
       int maxLengthForWords;
       Scanner scanner = new Scanner(System.in);
@@ -22,7 +23,6 @@ public class ArraySearch {
       words = new String[arrayLength];
 
       addWordsToArray(words, scanner);
-
       scanner.close();
 
       maxLengthForWords = getMaxLength(words);
@@ -31,15 +31,15 @@ public class ArraySearch {
    }
 
    private static void printWords(String[] words, int maxLengthForWords) {
-      for (String word : words){
-         if (word.length() == maxLengthForWords){
+      for (String word : words) {
+         if (word.length() == maxLengthForWords) {
             System.out.println(word);
          }
       }
    }
 
    private static void addWordsToArray(String[] words, Scanner scanner) {
-      for (int i = 0; i < words.length; i++){
+      for (int i = 0; i < words.length; i++) {
          System.out.print("Enter the word: ");
          words[i] = scanner.next();
       }
@@ -49,7 +49,7 @@ public class ArraySearch {
       int max = 0;
 
       for (String word : words) {
-         if(word.length() > max){
+         if (word.length() > max) {
             max = word.length();
          }
       }

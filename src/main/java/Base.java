@@ -17,16 +17,16 @@ public class Base {
 
       task = scanner.nextInt();
 
-      switch (task){
-         case 1 :
+      switch (task) {
+         case 1:
             System.out.println("==========================");
             Calculator.start();
-         break;
+            break;
 
-         case 2 :
+         case 2:
             System.out.println("==========================");
             ArraySearch.start();
-         break;
+            break;
 
          default:
             System.out.println("Invalid task");

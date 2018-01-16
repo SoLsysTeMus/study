@@ -2,6 +2,7 @@ import java.util.Scanner;
 
 /**
  * Created by Aplana
+ *
  * @author Dmitriy
  * @version 2
  */
@@ -32,43 +33,47 @@ public class Calculator {
 
       scanner.close();
 
-      switch (operation){
-         case 1: result = addition(a, b);
-         break;
+      switch (operation) {
+         case 1:
+            result = addition(a, b);
+            break;
 
-         case 2: result = subtraction(a, b);
-         break;
+         case 2:
+            result = subtraction(a, b);
+            break;
 
-         case 3: result = multiplication(a, b);
-         break;
+         case 3:
+            result = multiplication(a, b);
+            break;
 
-         case 4: result = division(a, b);
-         break;
+         case 4:
+            result = division(a, b);
+            break;
 
          default:
             System.out.println("Invalid operation number!");
             correctOperationNumber = false;
       }
 
-      if(correctOperationNumber) {
+      if (correctOperationNumber) {
          System.out.println("==========================");
          System.out.printf("Result is: %.4f", result);
       }
    }
 
-   private static double addition(double a, double b){
+   private static double addition(double a, double b) {
       return a + b;
    }
 
-   private static double subtraction(double a, double b){
+   private static double subtraction(double a, double b) {
       return a - b;
    }
 
-   private static double multiplication(double a, double b){
+   private static double multiplication(double a, double b) {
       return a * b;
    }
 
-   private static double division(double a, double b){
+   private static double division(double a, double b) {
       return a / b;
    }
 
