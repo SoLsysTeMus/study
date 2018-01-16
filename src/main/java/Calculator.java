@@ -3,26 +3,74 @@ import java.util.Scanner;
 /**
  * Created by Aplana
  * @author Dmitriy
- * @version 1
+ * @version 2
  */
 public class Calculator {
 
-   public static void main(String[] args) {
+   public static void start() {
 
+      int operation;
+      boolean correctOperationNumber = true;
+      double a, b, result = 0;
       Scanner scanner = new Scanner(System.in);
 
-      float a, b, sum;
+      System.out.println("This is calculator.");
 
-      System.out.println("Enter the first number");
-      a = scanner.nextFloat();
+      System.out.print("Enter the first number: ");
+      a = scanner.nextDouble();
 
-      System.out.println("Enter the second number");
-      b = scanner.nextFloat();
+      System.out.print("Enter the second number: ");
+      b = scanner.nextDouble();
+
+      System.out.print("Select operation:\n" +
+              "1 - Addition\n" +
+              "2 - Subtraction\n" +
+              "3 - Multiplication\n" +
+              "4 - Division\n" +
+              "Operation: ");
+      operation = scanner.nextInt();
 
       scanner.close();
 
-      sum = a + b;
+      switch (operation){
+         case 1: result = addition(a, b);
+         break;
 
-      System.out.printf("Sum is: %.4f", sum);
+         case 2: result = subtraction(a, b);
+         break;
+
+         case 3: result = multiplication(a, b);
+         break;
+
+         case 4: result = division(a, b);
+         break;
+
+         default:
+            System.out.println("Invalid operation number!");
+            correctOperationNumber = false;
+      }
+
+      if(correctOperationNumber) {
+         System.out.println("==========================");
+         System.out.printf("Result is: %.4f", result);
+      }
    }
+
+   private static double addition(double a, double b){
+      return a + b;
+   }
+
+   private static double subtraction(double a, double b){
+      return a - b;
+   }
+
+   private static double multiplication(double a, double b){
+      return a * b;
+   }
+
+   private static double division(double a, double b){
+      return a / b;
+   }
+
+
 }
