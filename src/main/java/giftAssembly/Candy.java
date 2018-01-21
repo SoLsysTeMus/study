@@ -3,6 +3,7 @@ package giftAssembly;
 public class Candy extends Gift{
 
    private String color;
+   private String type;
 
    public Candy(String name, double weight, double cost, String color) {
       super(name, weight, cost);
