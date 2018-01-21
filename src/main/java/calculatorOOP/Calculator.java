@@ -1,10 +1,10 @@
-package CalculatorOOP;
+package calculatorOOP;
 
 
-import CalculatorOOP.Operations.Addition;
-import CalculatorOOP.Operations.Division;
-import CalculatorOOP.Operations.Multiplication;
-import CalculatorOOP.Operations.Subtraction;
+import calculatorOOP.operations.Addition;
+import calculatorOOP.operations.Division;
+import calculatorOOP.operations.Multiplication;
+import calculatorOOP.operations.Subtraction;
 
 import java.util.Scanner;
 

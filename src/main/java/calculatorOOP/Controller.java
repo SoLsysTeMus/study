@@ -1,4 +1,4 @@
-package CalculatorOOP;
+package calculatorOOP;
 
 
 public class Controller {
