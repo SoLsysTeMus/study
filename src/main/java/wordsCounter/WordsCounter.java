@@ -14,7 +14,7 @@ public class WordsCounter {
 
    public static void main(String[] args) throws IOException {
 
-      fileName = args[0];
+      fileName = "src/main/resources/textData";
 
       readWordsFromFile();
       printAllWordAndCount();
@@ -27,7 +27,7 @@ public class WordsCounter {
       BufferedReader reader = new BufferedReader(new FileReader(fileName));
 
       while (reader.ready()){
-         String [] temp = reader.readLine().split(" ");
+         String [] temp = reader.readLine().split("\\s");
 
          for (String s : temp) {
             String word = s.toLowerCase().trim().replaceAll("\\p{Punct}","");
@@ -64,4 +64,5 @@ public class WordsCounter {
          }
       }
    }
+
 }
