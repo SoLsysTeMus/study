@@ -1,6 +1,6 @@
 package giftAssembly;
 
-public class Marshmallow extends Gift{
+public class Marshmallow extends Gift {
 
    private String size;
 

@@ -1,6 +1,6 @@
 package calculatorOOP.operations;
 
-public class Subtraction extends AbstractOperation{
+public class Subtraction extends AbstractOperation {
 
    public Subtraction(double a, double b) {
       super(a, b);

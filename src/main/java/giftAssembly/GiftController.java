@@ -15,9 +15,9 @@ public class GiftController {
       Jellybean jellybean1 = new Jellybean("Jellybean1", 1.3, 1330.00, 15);
       Jellybean jellybean2 = new Jellybean("Jellybean2", 1.3, 1330.00, 15);
 
-      Gift [] gifts = new Gift[]{candy1, candy2, jellybean1, jellybean2, marshmallow};
+      Gift[] gifts = new Gift[]{candy1, candy2, jellybean1, jellybean2, marshmallow};
 
-      for (Gift gift: gifts){
+      for (Gift gift : gifts) {
          System.out.println(gift.toString());
          totalWeight += gift.getWeight();
          totalCost += gift.getCost();

@@ -3,9 +3,9 @@ import java.util.Random;
 public class ArrayElementsChange {
 
 
-   public static void start(){
+   public static void start() {
 
-      int [] array = new int [20];
+      int[] array = new int[20];
 
       initArray(array);
 
@@ -24,7 +24,7 @@ public class ArrayElementsChange {
 
    private static void printArray(int[] array) {
       System.out.print("[");
-      for (int num: array) {
+      for (int num : array) {
          System.out.printf("%4d", num);
       }
       System.out.println("]");
@@ -38,22 +38,20 @@ public class ArrayElementsChange {
 
    }
 
-   private static int searchMinPositiveIndex (int[] array) {
+   private static int searchMinPositiveIndex(int[] array) {
 
       int minPositiveNumber = Integer.MAX_VALUE;
       int indexOfMinPositive = 0;
 
-      for (int i = 0; i < array.length; i++)
-      {
-         if (array[i] < minPositiveNumber & array[i] > 0)
-         {
+      for (int i = 0; i < array.length; i++) {
+         if (array[i] < minPositiveNumber & array[i] > 0) {
             minPositiveNumber = array[i];
             indexOfMinPositive = i;
          }
       }
 
       System.out.println(String.format("Minimal positive number is %d, position %d",
-                                        minPositiveNumber, indexOfMinPositive));
+              minPositiveNumber, indexOfMinPositive));
 
       return indexOfMinPositive;
    }
@@ -62,16 +60,14 @@ public class ArrayElementsChange {
 
       int indexOfMaxNegative = 0;
 
-      for (int i = 1; i < array.length; i++)
-      {
-         if (array[i] < array[indexOfMaxNegative] & array[i] < 0)
-         {
+      for (int i = 1; i < array.length; i++) {
+         if (array[i] < array[indexOfMaxNegative] & array[i] < 0) {
             indexOfMaxNegative = i;
          }
       }
 
       System.out.println(String.format("Maximum negative number is %d, position %d",
-                                          array[indexOfMaxNegative], indexOfMaxNegative));
+              array[indexOfMaxNegative], indexOfMaxNegative));
 
       return indexOfMaxNegative;
    }
@@ -79,7 +75,7 @@ public class ArrayElementsChange {
    private static void initArray(int[] array) {
       Random random = new Random();
 
-      for (int i = 0; i < array.length; i++){
+      for (int i = 0; i < array.length; i++) {
          array[i] = random.nextInt(21) - 10;
       }
    }

@@ -39,7 +39,7 @@ public abstract class Gift {
    @Override
    public String toString() {
       return "name = " + name +
-             ", weight = " + weight +
-             ", cost = " + cost;
+              ", weight = " + weight +
+              ", cost = " + cost;
    }
 }

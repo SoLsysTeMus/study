@@ -6,27 +6,32 @@ import calculatorOOP.operations.Division;
 import calculatorOOP.operations.Multiplication;
 import calculatorOOP.operations.Subtraction;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Calculator {
 
    private double a, b, result;
    private int operationNumber;
-   private boolean correctOperationNumber =true;
+   private boolean correctOperationNumber = true;
 
    private Scanner scanner = new Scanner(System.in);
 
-   public void start(){
+   public void start() {
       System.out.println("This is calculator.");
 
-      System.out.print("Enter the first number: ");
-      setA(scanner.nextDouble());
+      try {
+         System.out.print("Enter the first number: ");
+         setA(scanner.nextDouble());
 
-      System.out.print("Enter the second number: ");
-      setB(scanner.nextDouble());
+         System.out.print("Enter the second number: ");
+         setB(scanner.nextDouble());
+      } catch (InputMismatchException e) {
+         System.out.println("Only numbers are allowed");
+      }
    }
 
-   public void selectOperation(){
+   public void selectOperation() {
 
       System.out.print("Select operationNumber:\n" +
               "1 - Addition\n" +
@@ -35,19 +40,23 @@ public class Calculator {
               "4 - Division\n" +
               "Operation: ");
 
-      setOperationNumber(scanner.nextInt());
+      try {
+         setOperationNumber(scanner.nextInt());
+      } catch (InputMismatchException e) {
+         System.out.println("Only numbers are allowed");
+      }
 
       switch (getOperationNumber()) {
          case 1:
-            setResult(new Addition(getA(),getB()).result());
+            setResult(new Addition(getA(), getB()).result());
             break;
 
          case 2:
-            setResult(new Subtraction(getA(),getB()).result());
+            setResult(new Subtraction(getA(), getB()).result());
             break;
 
          case 3:
-            setResult(new Multiplication(getA(),getB()).result());
+            setResult(new Multiplication(getA(), getB()).result());
             break;
 
          case 4:

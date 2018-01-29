@@ -1,6 +1,6 @@
 package giftAssembly;
 
-public class Candy extends Gift{
+public class Candy extends Gift {
 
    private String color;
    private String type;
